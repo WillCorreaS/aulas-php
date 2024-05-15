@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays</title>
+
+            <!-- utilizando bootstrap CSS-->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+            <style>
+                body{
+                    margin: auto;
+                    padding: 25px;
+                }
+            </style>
+
 </head>
 <body>
 <h1>Trabalhando com Arrays</h1>
@@ -39,7 +51,7 @@ $filme = [
 ];
 
 
-$livro = array (
+$livros = array (
     "titulo" => "Harry Potter",
     "autor" => "J.K. Rowlling",
     "genero" => "Fantasia"
@@ -47,11 +59,19 @@ $livro = array (
 
 ?>
 
+<p>O filme <?=$filme["titulo"]?> foi lançado em <?=$filme["ano"]?></p>
 
+<p>O livro <?=$livros["titulo"]?> é da escritora <?=$livros["autor"]?>, curto muito o genero <?=$livros["genero"]?>.</p>
 
+<hr>
+<h2>Comando úteis para análise e depuração de ARRAYS</h2>
 
+<h3><code>print_r()</code> e <code>var_dunp()</code></h3>
 
+<p>► Exemplo:</p>
+<pre><?=print_r($bandas)?></pre>
 
+<pre><?=var_dump($filme)?></pre>
 
 </div>
 
