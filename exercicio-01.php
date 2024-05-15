@@ -16,6 +16,9 @@
         }
 
         .alert{
+            margin:20%;
+            margin-top:10px;
+            padding: 30px;
             box-shadow:black 1px 3px 2px;
         }
 
