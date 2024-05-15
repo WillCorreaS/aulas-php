@@ -9,9 +9,13 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
         <style>
-body {
+        body {
         background-color: lightblue;
+        text-align:center;
+        text-shadow: 0 0 2px;
         }
+
+
         </style>
 
 </head>
@@ -22,6 +26,8 @@ body {
         <hr>
         
 <!-- Declarando Variáveis -->
+
+<h2><b><i>Declaração</i></b> e <b><i>Saída</i></b> de dados utilizando <b>echo</b></h2>
         <?php
 $curso = "Promamação Web";
 $ano = "2024";
@@ -39,17 +45,21 @@ const EMPRESA = "HOME Tech";
 
 //Wilian trabalha na empresa Home Tech
 echo AUTOR . "trabalha na empresa " . EMPRESA;
-
-
-
-
 ?>
 
+<hr>
+<h2><b><i>Saída</i></b> de dados <b><i>SIMPLIFICADA/DIRETA</i></b>.</h2>
 
+<!-- Criando uma sida de dados (Estamos no Programador Web em 2024) -->
+
+<p>Estamos no <b><?=$curso?></b> em <?=$ano?>.</p>
+
+
+<!-- Wilian trabalha na empresa Home Tech -->
+
+<p><?=AUTOR?> trabalha na empresa <?=EMPRESA?>.</p>
 
     </div>
-
-
 
 
 <!-- utilizando bootstrap Javascrips-->
