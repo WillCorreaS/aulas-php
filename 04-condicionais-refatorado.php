@@ -29,20 +29,21 @@
 
     <h1>Trabalhando com Condicionais - Refatorado<b>PHP</b></h1>
     <hr>
+
     <div class="container">
         <h2>Simples (usa <code>if</code>)</h2>
         <?php
         $numero = 50;
-
-        if ($numero < 100) {
-            echo "<p>► Condição é verdadeira/true.</p>";
+        if ($numero < 100) {?>
+            <p>► Condição é verdadeira/true.</p>
+        <?php 
         }
         ?>
 
         <hr>
         <h2>Composta (usa <code>if/else</code>)</h2>
         <?php
-        $produto = "carro";
+        $produto = "Ultrabook";
         $qtdEmEstoque = 5;
         $qtdCritica = 2
         ?>
@@ -99,16 +100,13 @@
             case "Tv":
                 $garantia2 = 3;
                 break;
-            case "Aspirador":
-                $garantia2 = 2;
-                break;
             default:
                 $garantia2 = 1;
                 break;
         };
         ?>
 
-        <p>Garantia 2: <?= $garantia2 ?></p>
+        <p>Garantia 2: <span class="badge text-bg-primary"><?= $garantia2 ?></p>
 
 
     </div>
