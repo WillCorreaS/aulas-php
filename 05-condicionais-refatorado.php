@@ -29,7 +29,6 @@
 
     <h1>Trabalhando com Condicionais - Refatorado<b>PHP</b></h1>
     <hr>
-
     <div class="container">
         <h2>Simples (usa <code>if</code>)</h2>
         <?php
@@ -39,7 +38,6 @@
         <?php 
         }
         ?>
-
         <hr>
         <h2>Composta (usa <code>if/else</code>)</h2>
         <?php
@@ -47,30 +45,26 @@
         $qtdEmEstoque = 5;
         $qtdCritica = 2
         ?>
-
         <h3>Produto: <?= $produto ?></h3>
         <h3>Estoque: <?= $qtdEmEstoque ?></h3>
-
         <?php
-        if ($qtdEmEstoque < $qtdCritica) {
-            echo "<p class= 'alert alert-warning' role='alert'>Precisa repor o produto $produto.</p>";
-
-
-            if ($qtdEmEstoque == 0) {
-                echo "<p class='alert alert-danger' role='alert'>Precisa repor URGENTE!</p>";
-            }
-        } else {
-            echo "<p class='alert alert-success' role='alert'> Tem o suficiente, boas vendas!</p>";
+        if ($qtdEmEstoque < $qtdCritica) {?>
+            <p class= 'alert alert-warning' role='alert'>Precisa repor o produto $produto.</p>
+            <?php
+            if ($qtdEmEstoque == 0){
+            ?>
+                <p class='alert alert-danger' role='alert'>Precisa repor URGENTE!</p>
+                <?php
+                }
+        } else {?>
+            <p class='alert alert-success' role='alert'> Tem o suficiente, boas vendas!</p>
+        <?php    
         };
-
         ?>
         <hr>
         <h3>Encadeada (usa <code>if, else, elseif</code> )</h3>
-
         <?php
-        $ano = "anos";;
-
-
+        $ano = "anos";
         if ($produto == "Ultrabook") {
             $garantia = 5;
         } elseif ($produto == "Geladeira") {
@@ -81,14 +75,9 @@
             $garantia = 1;
             $ano = "ano";
         };
-
-
         ?>
-
-        <p>O produto <b><?= $produto ?></b> tem garantia de <span class="badge text-bg-primary"><?= $garantia ?></span> <?= $ano ?>.</p>
-
+        <p>O produto <b><?= $produto?></b> tem garantia de <span class="badge text-bg-primary"><?= $garantia?></span> <?=$ano?>.</p>
         <hr>
-
         <?php
         switch ($produto) {
             case "Ultrabook":
@@ -105,14 +94,8 @@
                 break;
         };
         ?>
-
         <p>Garantia 2: <span class="badge text-bg-primary"><?= $garantia2 ?></p>
-
-
     </div>
-
-
-
 </body>
 
 </html>
