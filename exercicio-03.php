@@ -21,13 +21,15 @@
 <?php
 $meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-foreach($meses as $mes){?>
+?>
     <ol>
-        <li><?=$mes?></li>
-    </ol>
+<?php
+foreach($meses as $mes){?>
+    <li><?=$mes?></li>
 <?php
 }
 ?>
+
     </div>
     
 </body>
