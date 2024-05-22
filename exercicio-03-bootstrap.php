@@ -3,13 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exercício 03</title>
+<title>Exercício 03 (com Bootstrap)</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+<style>
+    .list-group-item:nth-child(odd){
+        background-color: lightblue;
+    }
+</style>
 </head>
 <body>
 <div class="container">
-    <h1>Exercício 03</h1>
+    <h1>Exercício 03 (com Bootstrap)</h1>
     <hr>
 <?php
 $mesesDoAno = [
@@ -17,15 +21,11 @@ $mesesDoAno = [
     'Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'
 ];
 ?>
-<ol>
-<?php 
-for( $i = 0; $i < count($mesesDoAno); $i++ ){ 
-    /* Neste caso, avaliamos o resto da divisão por 2.
-    Quando é zero (ou seja, número par), atribuimos a cor vermelha. Quando é diferente de zero (ou seja, ímpar),
-    atribumos a cor azul. */
-    $cor = $i % 2 == 0 ? "red" : "blue";
-?>
-    <li style="color: <?=$cor?>"> <?=$mesesDoAno[$i]?> </li>
+<ol class="list-group list-group-numbered">
+<?php foreach( $mesesDoAno as $mes ){ ?>
+    <li class="list-group-item"> 
+        <?=$mes?>
+    </li>
 <?php } ?>
 </ol>
 
