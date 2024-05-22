@@ -37,10 +37,16 @@ if (empty($name) || empty($email)) {
 <ul>
     <li>Nome: <?=$nome?></li>
     <li>Email: <?=$email?></li>
-    <li>Data de nascimento: <?=$nascimento?></li>
-    <li>Mensagem: <?=$mensagem?></li>
-</ul>
 
+    <?php  if (!empty($nascimento)){ ?>
+    <li>Data de nascimento: <?=$nascimento?></li>
+    <?php } ?>
+        
+    <?php if (!empty($mensagem)){ ?>
+    <li>Mensagem: <?=$mensagem?></li>
+    <?php } ?>
+
+</ul>
 <?php } ?>
 
 </body>
